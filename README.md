@@ -1,6 +1,6 @@
 # Minimising TLB misses using Large Pages 
 
-We are given an unknown workload `libwork.so` which does not access all the allocated memory in a uniform manner. Hence, we need to first identify the virtual address regions that witness the most TLB misses and later deploy these regions with large pages so that the TLB misses are minimised and performance is improved.
+We are given an unknown workload `libwork.so` which does not access all the allocated memory in a uniform manner. Hence, we need to first identify the virtual address regions that witness the most TLB misses and later deploy these regions with large pages so that the TLB misses are minimised and overall program performance is improved.
 
 
 To achieve this, we have used ``sudo perf mem record`` and ``sudo perf mem report`` to know the memory access patterns in given woprkload and whether they were TLB miss or hit and store them in a file called `mem_accesses.txt`.
